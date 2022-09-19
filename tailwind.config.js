@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [
+  content: [
     './storage/framework/views/*.php',
     './resources/**/*.blade.php',
     './resources/**/*.js',
