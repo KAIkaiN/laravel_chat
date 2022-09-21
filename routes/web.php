@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReplyController;
 use App\Http\Controllers\ThreadController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,5 +19,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::redirect('/', '/threads');
-Route::resource('/threads',ThreadController::class);
+// Route::redirect('/', '/threads');
+Route::redirect('/', '/thread');
+// Route::resource('/threads',ThreadController::class);
+Route::resource('/thread', ThreadController::class);
+Route::resource('/reply', ReplyController::class);

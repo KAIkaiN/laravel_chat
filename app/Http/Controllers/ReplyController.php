@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Replie;
 use Illuminate\Http\Request;
 
 class ReplyController extends Controller
@@ -34,7 +35,11 @@ class ReplyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // フォームに入力されたリプライ情報をデータベースへ登録
+        $replies = new Replie;
+        $form = $request->all();
+        $replies->fill($form)->save();
+        return redirect('/');
     }
 
     /**
