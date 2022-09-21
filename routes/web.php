@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ThreadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +19,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::redirect('/', '/threads');
-Route::view('/threads', '/threads/index');
+Route::resource('/threads',ThreadController::class);
